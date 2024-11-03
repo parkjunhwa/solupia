@@ -94,7 +94,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- // 화면확인용 cdn 코드 중복이면 삭제 - 박준화  -->
-  <link rel="stylesheet" href="main_style02.css" /> <!-- 메인디자인 타입2 - 박준화  -->
+  <link rel="stylesheet" href="main_style01.css" />   <!-- 메인디자인 타입1 - 박준화  --> 
 
 </head>
 <!-- BEGIN Body -->
@@ -191,47 +191,43 @@
 
           <!-- comeprima_main -->
           <div class="row comeprima_main">
-            <div class="col-lg-6 col-md-6 card-spacing">
-              <div class="card card-info-mainchart">
-                <div class="card-body">
-                  <h4 class="title">금일신청현황</h4>
-                  <div class="chart-container" style="max-height:176px;margin-top:8px;">
-                    <canvas id="myChart1" style="max-height:176px;"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 card-spacing monitor_container">
-              <div class="card card_item">
+            <div class="col-lg-3 col-md-6 card-spacing">
+              <div class="card">
                 <div class="card-body card-info card-info01">
                   <div class="wave-bg"></div>
                   <div class="-icon"></div>
-                  <h4 class="title">금일결재대기</h4>
-                  <div class="number roboto">0</div>
+                  <h4 class="title">금일접수대기</h4>
+                  <div class="number roboto">39</div>
                 </div>
               </div>
-              <div class="card card_item">
-                <div class="card-body card-info card-info02">
-                  <div class="wave-bg"></div>
-                  <div class="-icon"></div>
-                  <h4 class="title">금일결재대기</h4>
-                  <div class="number roboto">0</div>
-                </div>
-              </div>
-              <div class="card card_item">
-                <div class="card-body card-info card-info03">
-                  <div class="wave-bg"></div>
-                  <div class="-icon"></div>
-                  <h4 class="title">금일결재대기</h4>
-                  <div class="number roboto">0</div>
-                </div>
-              </div>
-              <div class="card card_item">
+            </div>
+            <div class="col-lg-3 col-md-6 card-spacing">
+              <div class="card">
                 <div class="card-body card-info card-info04">
                   <div class="wave-bg"></div>
                   <div class="-icon"></div>
-                  <h4 class="title">금일결재대기</h4>
-                  <div class="number roboto">0</div>
+                  <h4 class="title">금일처리완료</h4>
+                  <div class="number roboto">12</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 card-spacing">
+              <div class="card">
+                <div class="card-body card-info card-info02">
+                  <div class="wave-bg"></div>
+                  <div class="-icon"></div>
+                  <h4 class="title">금일결제대기</h4>
+                  <div class="number roboto">26</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 card-spacing">
+              <div class="card">
+                <div class="card-body card-info card-info05">
+                  <div class="wave-bg"></div>
+                  <div class="-icon"></div>
+                  <h4 class="title">금일처리불가</h4>
+                  <div class="number roboto">5</div>
                 </div>
               </div>
             </div>
@@ -241,12 +237,10 @@
               <div class="card">
                 <div class="card-body">
                   <div class="card_title01">
-                    <h3 class="card_title_txt mb-0">
-                      나의 주간 신청 및 처리 완료 건수
-                    </h3>
+                    <h3 class="card_title_txt mb-0">Top <span class="roboto point">3</span> 신청서별 신청건수</h3>
                   </div>
                   <div class="chart-container">
-                    <canvas id="weeklyChart"></canvas>
+                    <canvas id="randomWeeklyChart"></canvas>
                   </div>
                 </div>
               </div>
@@ -255,23 +249,11 @@
               <div class="card">
                 <div class="card-body">
                   <div class="card_title01">
-                    <h3 class="card_title_txt mb-0">
-                      금주 신청 및 결재 현황
-                    </h3>
-                  </div>
-                  <div class="chart-container">
-                    <canvas id="secondWeeklyChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 card-spacing">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card_title01">
-                    <h3 class="card_title_txt mb-0">나의 Top 5 신청 현황</h3>
-                    <div class="card_title_btn_more">
-                      <a href="#" class="text_btn" type="button">더보기 <i class="fas fa-angle-right"></i></a>
+                    <h3 class="card_title_txt mb-0">Top <span class="roboto point">3</span> 신청서</h3>
+                    <div class="card_title_btns">
+                      <button class="main_card_btn01" type="button">금일</button>
+                      <button class="main_card_btn01" type="button">주간</button>
+                      <button class="main_card_btn01 active" type="button">월간</button>
                     </div>
                   </div>
                   <div class="chart-container">
@@ -284,74 +266,33 @@
               <div class="card">
                 <div class="card-body">
                   <div class="card_title01">
-                    <h3 class="card_title_txt mb-0">
-                      나의 Top <span class="roboto point">5</span> 신청 현황
-                    </h3>
+                    <h3 class="card_title_txt mb-0">Top <span class="roboto point">5</span> 신청자</h3>
                     <div class="card_title_btns">
-                      <button class="main_card_btn01" type="button">
-                        금일
-                      </button>
-                      <button class="main_card_btn01" type="button">
-                        주간
-                      </button>
-                      <button class="main_card_btn01" type="button">
-                        월간
-                      </button>
+                      <button class="main_card_btn01" type="button">금일</button>
+                      <button class="main_card_btn01" type="button">주간</button>
+                      <button class="main_card_btn01 active" type="button">월간</button>
                     </div>
                   </div>
-                  <table class="table card_table_01">
-                    <colgroup>
-                      <col style="width: auto" />
-                      <col style="width: 60px" />
-                      <col style="width: 60px" />
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">제목</th>
-                        <th scope="col">신청일</th>
-                        <th scope="col">만료일</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">
-                          제목1asdasdasfdsasfasfas fasfasdsdasdas
-                        </td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                        <td class="date">24.09.10</td>
-                        <td class="date">24.10.10</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="chart-container">
+                    <canvas id="namesChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 card-spacing">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card_title01">
+                    <h3 class="card_title_txt mb-0">Top <span class="roboto point">5</span> 신청부서</h3>
+                    <div class="card_title_btns">
+                      <button class="main_card_btn01" type="button">금일</button>
+                      <button class="main_card_btn01" type="button">주간</button>
+                      <button class="main_card_btn01 active" type="button">월간</button>
+                    </div>
+                  </div>
+                  <div class="chart-container">
+                    <canvas id="departmentsChart"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
@@ -375,27 +316,22 @@
                     </thead>
                     <tbody>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">
-                          제목1asdasdasfdsasfasfas fasfasdsdasdas
-                        </td>
+                        <td class="title">가이드 안내 1입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">가이드 안내 2입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">가이드 안내 3입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">가이드 안내 4입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">가이드 안내 5입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">가이드 안내 6입니다.</td>
                       </tr>
                     </tbody>
                   </table>
@@ -422,27 +358,22 @@
                     </thead>
                     <tbody>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">
-                          제목1asdasdasfdsasfasfas fasfasdsdasdas
-                        </td>
+                        <td class="title">FAQ 1 제목입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">FAQ 2 제목입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">FAQ 3 제목입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">FAQ 4 제목입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">FAQ 5 제목입니다.</td>
                       </tr>
                       <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
-                      </tr>
-                      <tr onclick="window.location.href='javascript:;';">
-                        <td class="title">제목1</td>
+                        <td class="title">FAQ 6 제목입니다.</td>
                       </tr>
                     </tbody>
                   </table>
@@ -467,6 +398,6 @@
 </body>
 <!-- END Body -->
 
-<script src="js/new_main_chart2.js"></script>
+<script src="js/new_main_chart1.js"></script>
 
 </html>
