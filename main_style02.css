@@ -1,7 +1,6 @@
 .page-content.comeprima_content {
   padding: 1.5rem;
-  background: #d2e0e6;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #d9d9d9 0%, #fff 29.7%);
 }
 .comeprima_main .roboto {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial !important;
@@ -10,13 +9,13 @@
   color: #014d77;
 }
 .comeprima_main .card-body {
-  padding: 16px;
+  padding: 0;
   flex-grow: 1;
 }
 .comeprima_main .card {
-  border-radius: 8px;
   overflow: hidden;
   border: none;
+  border-radius: 0;
 }
 .comeprima_main .card-spacing {
   padding-bottom: 24px;
@@ -27,10 +26,10 @@
   align-items: center;
 }
 .comeprima_main .card_title01 .card_title_txt {
-  font-size: 16px;
-  color: #333;
+  font-size: 20px;
+  color: #053a5f;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 30px;
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -41,7 +40,11 @@
 .comeprima_main .card_title01 .card_title_btn_more {
   display: flex;
   gap: 8px;
-  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid #c9c9c9;
+  background: #fff;
+  line-height: 19px;
+  padding: 2px 8px;
 }
 .comeprima_main .card_title01 .card_title_btn_more a {
   color: #333;
@@ -51,7 +54,7 @@
   color: #000;
 }
 .comeprima_main .chart-container {
-  max-height: 308px;
+  max-height: 247px;
   overflow: hidden;
   margin-top: 8px;
   display: flex;
@@ -77,58 +80,77 @@
   font-weight: 400;
   line-height: normal;
   border: none;
-  padding: 0;
+  padding: 2px 8px;
+  line-height: 19px;
+  border-radius: 4px;
+  border: 1px solid #c9c9c9;
+  background: #fff;
 }
 .comeprima_main .main_card_btn01:hover .comeprima_main .main_card_btn01:active {
   color: #000;
 }
 .comeprima_main .card_table_01 {
-  margin: 0 0 -8px 0;
-  border-collapse: separate;
-  border-spacing: 0 8px;
   max-width: 100%;
   overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.comeprima_main .card_table_01 thead {
+  position: relative;
 }
 .comeprima_main .card_table_01 thead tr {
-  background: #0059b5;
-  color: #fff;
+  background: #e3e3e3;
+  color: #333;
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  overflow: hidden;
 }
-.comeprima_main .card_table_01 thead th:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+.comeprima_main .card_table_01 thead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #333;
 }
-.comeprima_main .card_table_01 thead th:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+.comeprima_main .card_table_01 thead::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #c9c9c9;
 }
 .comeprima_main .card_table_01 th,
 .comeprima_main .card_table_01 td {
-  padding: 4px 12px;
-}
-.comeprima_main .card_table_01 td:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.comeprima_main .card_table_01 td:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  padding: 6px 12px 5px 12px;
 }
 .comeprima_main .card_table_01 tbody tr {
-  border-radius: 4px;
-  background: #e3e3e3;
-  color: #fff;
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
+  position: relative;
+}
+.comeprima_main .card_table_01 tbody tr::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #c9c9c9;
+  z-index: 1;
+}
+.comeprima_main .card_table_01 tbody tr:hover {
+  background: #c9c9c9;
 }
 .comeprima_main .card_table_01 tbody td {
   color: #333;
@@ -137,8 +159,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 10px 12px;
-  border-top: 0px solid #fff;
+  padding: 7px 12px;
 }
 .comeprima_main .card_table_01 tbody tr td.title {
   text-align: left;
@@ -150,8 +171,16 @@
 .comeprima_main .card_table_01 tbody tr td.date {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
 }
+
+.comeprima_main .card.card-info-mainchart {
+  border-radius: 20px;
+  background: #011739;
+  height: 265px;
+}
 .comeprima_main .card-body.card-info {
-  height: 160px;
+  border-radius: 20px;
+  background: #011739;
+  height: 265px;
 }
 .comeprima_main .card-body.card-info::before {
   content: "";
